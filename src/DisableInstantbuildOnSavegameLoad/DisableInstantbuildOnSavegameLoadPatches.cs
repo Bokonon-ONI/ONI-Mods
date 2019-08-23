@@ -15,7 +15,7 @@ namespace DisableInstantBuildOnSavegameLoad
         {
             public static void OnLoad()
             {
-                Console.WriteLine($"{Timestamp()} Loading Mod: {ModInfo.Name} Version: {ModInfo.Version}");
+                Console.WriteLine($"{Timestamp()} Loading Mod: \"{ModInfo.Name}\" Version: {ModInfo.Version}");
             }
         }
 
