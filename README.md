@@ -1,6 +1,6 @@
 # **Bokonon's Oxygen Not Included mods**
 
-These are my mods, hope others can find them od some use.
+These are my mods, hope others can find them of some use.
 
 ## **Released Mods**
 
