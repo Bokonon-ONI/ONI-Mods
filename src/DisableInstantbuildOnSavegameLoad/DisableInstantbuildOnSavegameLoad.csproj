@@ -7,8 +7,8 @@
     <ProjectGuid>{6C8AACFF-ACF2-49AF-8299-E0B31A96DD5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DisableInstantbuildOnSavegameLoad</RootNamespace>
-    <AssemblyName>DisableInstantbuildOnSavegameLoad</AssemblyName>
+    <RootNamespace>DisableInstantBuildOnSavegameLoad</RootNamespace>
+    <AssemblyName>DisableInstantBuildOnSavegameLoad</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -59,8 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisableInstantbuildOnSavegameLoadConfig.cs" />
-    <Compile Include="DisableInstantbuildOnSavegameLoadPatches.cs" />
+    <Compile Include="DisableInstantBuildOnSavegameLoadPatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
