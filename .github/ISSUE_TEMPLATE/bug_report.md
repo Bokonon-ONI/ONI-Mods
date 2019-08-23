@@ -7,6 +7,9 @@ assignees: Bokonon-ONI
 
 ---
 
+**Disclaimer**
+**Please don't report bugs you encounter to Klei while mods are active. People at Klei work hard and shouldn't be bothered with bug reports which might originate from mods.**
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
