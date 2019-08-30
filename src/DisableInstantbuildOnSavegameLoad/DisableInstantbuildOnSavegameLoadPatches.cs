@@ -23,7 +23,7 @@ namespace DisableInstantBuildOnSavegameLoad
         [HarmonyPatch("OnKeyUp")]
         public class LoadScreen_OnKeyUp_Patch
         {
-            public static void Prefix(ref DebugHandler __instance)
+            public static void Prefix()
             {
                 //Console.WriteLine($"{Timestamp()} **** Entered LoadScreen_OnKeyUp_Patch.Prefix ****");
                 if (!DebugHandler.enabled)

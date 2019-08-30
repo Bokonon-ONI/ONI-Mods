@@ -7,8 +7,8 @@
     <ProjectGuid>{364DA4E8-A4CA-4104-B27E-ABE5C6B034DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InsulatedFarmTilePatches</RootNamespace>
-    <AssemblyName>InsulatedFarmTilePatches</AssemblyName>
+    <RootNamespace>InsulatedFarmTiles</RootNamespace>
+    <AssemblyName>InsulatedFarmTiles</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,6 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -55,15 +58,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InsulatedFarmTileConfig.cs" />
+    <Compile Include="InsulatedHydroponicFarmConfig.cs" />
     <Compile Include="InsulatedFarmTilePatches.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"..\..\Source\lib\pdb2mdb.exe" "$(TargetDir)$(TargetFileName)"
-
-xcopy "$(TargetDir.TrimEnd('\'))" "%25PROGRAMFILES(X86)%25\Steam\SteamApps\common\OxygenNotIncluded\Mods\$(ProjectName)" /Y /S /E /I
-xcopy "$(TargetDir.TrimEnd('\'))" "%25USERPROFILE%25\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)" /Y /S /E /I
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

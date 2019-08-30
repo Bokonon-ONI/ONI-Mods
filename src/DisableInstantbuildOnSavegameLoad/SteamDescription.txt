@@ -1,0 +1,19 @@
+[h1]Disable Instant Build On Savegame Load[/h1]
+
+[h1]Purpose[/h1]
+This is to solve the problem I have when testing stuff and I bounce a bit between a debug/sandbox map and a survival map.  If Instant Build Mode is active for my debug map, when I would load my survival map it would still be active.  This changes the behavior so that on loading any save, Instant Build Mode is automatically deactivated.
+
+[h1]Bugs and Feature requests[/h1]
+Please use the github [url=https://github.com/Bokonon-ONI/ONI-Mods/issues]issues[/url] page for reporting bugs or requesting new features.
+[b]Please do not report bugs here on Steam, I will not check here frequently, use the github link above and I will get a notification.[/b]
+
+[h1]Acknowledgements[/h1]
+Thanks to the people who have helped me, this is my first experience modding and with C#.
+* The fine folks on the [url=https://discord.gg/EBncbX2]ONI Discord[/url] especially #mod-development.
+* I'd especially like to thank [url=https://github.com/Cairath/ONI-Mods]Cairath[/url] for the great mods and for being so helpful on the Discord.
+* [url=https://github.com/chromiumboy/OxygenNotIncludedMods]chromiumboy[/url] for the great [url=https://forums.kleientertainment.com/forums/topic/107833-tutorial-how-to-create-a-basic-mod-for-oni/?tab=comments#comment-1213118]intro tutorial[/url] posted to the Klei forums.
+
+[b]Thanks everyone!![/b]
+
+[h1]Source Code[/h1]
+[url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
