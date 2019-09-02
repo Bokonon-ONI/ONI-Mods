@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BokLib.Log;
+using BokLib.Tools;
 using STRINGS;
 using UnityEngine;
 using Harmony;
@@ -10,22 +12,20 @@ namespace InsulatedFarmTiles
 {
     public static class InsulatedFarmTilesPatches
     {
-        public static class ModInfo
-        {
-            public static string Name = "Insulated Farm Tiles";
-            public static string Version = "1.0.0";
-        }
+        private const string Name = "Insulated Farm Tiles";
+        private const string Version = "1.0.0.0";
+        private static readonly BokModInfo bokmodinfo = new BokModInfo(Name, Version);
 
         public static class OnModLoad
         {
             public static void OnLoad()
             {
-                Console.WriteLine($"{Timestamp()} ## Loading Mod: \"{ModInfo.Name}\" Version: {ModInfo.Version} ##");
+                LogTools.Initialize(bokmodinfo);
             }
         }
 
         [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
-        internal class InsulatedFarmTiles_GeneratedBuildings_LoadGeneratedBuildings
+        internal class InsulatedFarmTilesGeneratedBuildingsLoadGeneratedBuildings
         {
             private static void Prefix()
             {
@@ -44,7 +44,7 @@ namespace InsulatedFarmTiles
         }
 
         [HarmonyPatch(typeof(Db), "Initialize")]
-        public class InsulatedFarmTiles_Db_Initialize
+        public class InsulatedFarmTilesDbInitialize
         {
             public static string TechGroup = "TemperatureModulation";
             public static void Prefix()
@@ -59,7 +59,5 @@ namespace InsulatedFarmTiles
             var techList = new List<string>(Database.Techs.TECH_GROUPING[techgroup]) { buildingId };
             Database.Techs.TECH_GROUPING[techgroup] = techList.ToArray();
         }
-
-        private static string Timestamp() => System.DateTime.UtcNow.ToString("[HH:mm:ss.fff]");
     }
 }
