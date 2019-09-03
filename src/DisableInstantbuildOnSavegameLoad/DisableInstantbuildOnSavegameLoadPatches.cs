@@ -43,7 +43,5 @@ namespace DisableInstantBuildOnSavegameLoad
                 }
             }
         }
-
-        private static string Timestamp() => System.DateTime.UtcNow.ToString("[HH:mm:ss.fff]");
     }
 }

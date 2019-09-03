@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using BokLib.Tools;
 
 namespace BokLib.Log
@@ -11,6 +8,7 @@ namespace BokLib.Log
         public static void Initialize(BokModInfo info)
         {
             Console.WriteLine($"{Timestamp()} BokLib - Loading Mod: \"{info.Name}\" Version: \"{info.Version}\"");
+            Debug(info, "DEBUG enabled!");
         }
 
         public static void Debug(BokModInfo info, string message)
