@@ -8,13 +8,13 @@ namespace DisableInstantBuildOnSavegameLoad
     {
         private const string Name = "Disable Instant Build On Savegame Load";
         private const string Version = "1.0.1.0";
-        private static readonly BokModInfo bokmodinfo = new BokModInfo(Name, Version);
+        private static readonly BokModInfo ModInfo = new BokModInfo(Name, Version);
 
         internal static class OnModLoad
         {
             public static void OnLoad()
             {
-                LogTools.Initialize(bokmodinfo);
+                LogTools.Initialize(ModInfo);
             }
         }
 
@@ -24,21 +24,21 @@ namespace DisableInstantBuildOnSavegameLoad
         {
             public static void Prefix()
             {
-                LogTools.Debug(bokmodinfo, "Entered LoadScreen_OnKeyUp_Patch.Prefix");
+                LogTools.Debug(ModInfo, "Entered LoadScreen_OnKeyUp_Patch.Prefix");
                 if (!DebugHandler.enabled)
                 {
-                    LogTools.Debug(bokmodinfo, "Debug not enabled, exiting ...");
+                    LogTools.Debug(ModInfo, "Debug not enabled, exiting ...");
                     return;
                 }
 
                 if (!DebugHandler.InstantBuildMode)
                 {
-                    LogTools.Debug(bokmodinfo, "InstantBuildMode not enabled, exiting ...");
+                    LogTools.Debug(ModInfo, "InstantBuildMode not enabled, exiting ...");
                     return;
                 }
                 else
                 {
-                    LogTools.Debug(bokmodinfo, "Setting InstantBuildMode to false!");
+                    LogTools.Debug(ModInfo, "Setting InstantBuildMode to false!");
                     DebugHandler.InstantBuildMode = false;
                 }
             }

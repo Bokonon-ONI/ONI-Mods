@@ -8,6 +8,7 @@ namespace BokLib.Log
         public static void Initialize(BokModInfo info)
         {
             Console.WriteLine($"{Timestamp()} BokLib - Loading Mod: \"{info.Name}\" Version: \"{info.Version}\"");
+            // Just print a notice that DEBUG is active if it is, it shouldn't be active in the wild
             Debug(info, "DEBUG enabled!");
         }
 

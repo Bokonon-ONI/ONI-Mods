@@ -5,14 +5,16 @@ namespace InsulatedFarmTiles
 {
     public class InsulatedHydroponicFarmConfig : IBuildingConfig
     {
-        public const string ID = "InsulatedHydroponicFarm";
+        public const string Id = "InsulatedHydroponicFarm";
         public const string DisplayName = "Insulated Hydroponic Farm Tile";
         public static string Description = "An insulated version of a Hydroponic Farm Tile.";
         public static string Effect = "A hydroponic farm tile insulated to help with temperature regulation.";
+        public static string PlanName = "Food";
+        public static string TechGroup = "FinerDining";
 
         public override BuildingDef CreateBuildingDef()
         {
-            string id = "InsulatedHydroponicFarm";
+            string id = Id;
             int width = 1;
             int height = 1;
             string anim = "insulatedfarmtilehydroponic_kanim";
