@@ -68,19 +68,11 @@
     <Compile Include="InsulatedFarmTileConfig.cs" />
     <Compile Include="InsulatedHydroponicFarmConfig.cs" />
     <Compile Include="InsulatedFarmTilePatches.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BokLib\BokLib.csproj">
@@ -89,10 +81,10 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    <PropertyGroup>
-<!--      <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" "$(ONIRefPath)Assembly-CSharp.dll" "$(ONIRefPath)Assembly-CSharp-firstpass.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>-->
-      <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>
-    </PropertyGroup>
+  <PropertyGroup>
+    <!--      <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" "$(ONIRefPath)Assembly-CSharp.dll" "$(ONIRefPath)Assembly-CSharp-firstpass.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>-->
+    <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>
+  </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
