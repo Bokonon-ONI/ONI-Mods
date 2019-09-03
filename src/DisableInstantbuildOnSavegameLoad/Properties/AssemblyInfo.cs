@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bokonon")]
 [assembly: AssemblyProduct("DisableInstantBuildOnSavegameLoad")]
-[assembly: AssemblyCopyright("Copyright ©  2019 Bokonon")]
+[assembly: AssemblyCopyright("Copyright ©  2019 by Bokonon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
