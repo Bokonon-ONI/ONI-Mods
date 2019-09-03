@@ -7,10 +7,10 @@ namespace InsulatedFarmTiles
     {
         public const string Id = "InsulatedFarmTile";
         public const string DisplayName = "Insulated Farm Tile";
-        public static string Description = "An insulated version of a Farm Tile.";
-        public static string Effect = "A farm tile insulated to help with temperature regulation.  Useful for allowing feeding wheezeworts phosphorite from outside an otherwise sealed environment.";
-        public static string PlanName = "Food";
-        public static string TechGroup = "FinerDining";
+        public const string Description = "An insulated version of a Farm Tile.";
+        public const string Effect = "A farm tile insulated to help with temperature regulation.  Useful for allowing feeding wheezeworts phosphorite from outside an otherwise sealed environment.";
+        public const string PlanName = "Food";
+        public const string TechGroup = "FinerDining";
 
         public override BuildingDef CreateBuildingDef()
         {

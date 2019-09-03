@@ -7,10 +7,10 @@ namespace InsulatedFarmTiles
     {
         public const string Id = "InsulatedHydroponicFarm";
         public const string DisplayName = "Insulated Hydroponic Farm Tile";
-        public static string Description = "An insulated version of a Hydroponic Farm Tile.";
-        public static string Effect = "A hydroponic farm tile insulated to help with temperature regulation.";
-        public static string PlanName = "Food";
-        public static string TechGroup = "FinerDining";
+        public const string Description = "An insulated version of a Hydroponic Farm Tile.";
+        public const string Effect = "A hydroponic farm tile insulated to help with temperature regulation.";
+        public const string PlanName = "Food";
+        public const string TechGroup = "FinerDining";
 
         public override BuildingDef CreateBuildingDef()
         {

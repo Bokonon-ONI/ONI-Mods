@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using BokLib.Log;
+﻿using BokLib.Log;
 using BokLib.Tools;
 using Harmony;
 
