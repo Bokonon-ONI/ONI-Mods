@@ -1,21 +1,20 @@
-﻿using System;
+﻿using BokLib.Log;
+using BokLib.Tools;
 using Harmony;
 
 namespace DisableInstantBuildOnSavegameLoad
 {
     internal class DisableInstantBuildOnSavegameLoadPatches
     {
-        public static class ModInfo
-        {
-            public static string Name = "Disable Instant Build On Savegame Load";
-            public static string Version = "1.0.0";
-        }
+        private const string Name = "Disable Instant Build On Savegame Load";
+        private const string Version = "1.0.1.0";
+        private static readonly BokModInfo bokmodinfo = new BokModInfo(Name, Version);
 
-        public static class OnModLoad
+        internal static class OnModLoad
         {
             public static void OnLoad()
             {
-                Console.WriteLine($"{Timestamp()} Loading Mod: \"{ModInfo.Name}\" Version: {ModInfo.Version}");
+                LogTools.Initialize(bokmodinfo);
             }
         }
 
@@ -25,13 +24,24 @@ namespace DisableInstantBuildOnSavegameLoad
         {
             public static void Prefix()
             {
-                //Console.WriteLine($"{Timestamp()} **** Entered LoadScreen_OnKeyUp_Patch.Prefix ****");
+                LogTools.Debug(bokmodinfo, "Entered LoadScreen_OnKeyUp_Patch.Prefix");
                 if (!DebugHandler.enabled)
+                {
+                    LogTools.Debug(bokmodinfo, "Debug not enabled, exiting ...");
                     return;
-                DebugHandler.InstantBuildMode = false;
+                }
+
+                if (!DebugHandler.InstantBuildMode)
+                {
+                    LogTools.Debug(bokmodinfo, "InstantBuildMode not enabled, exiting ...");
+                    return;
+                }
+                else
+                {
+                    LogTools.Debug(bokmodinfo, "Setting InstantBuildMode to false!");
+                    DebugHandler.InstantBuildMode = false;
+                }
             }
         }
-
-        private static string Timestamp() => System.DateTime.UtcNow.ToString("[HH:mm:ss.fff]");
     }
 }

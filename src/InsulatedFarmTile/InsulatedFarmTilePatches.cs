@@ -1,52 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using STRINGS;
-using UnityEngine;
+﻿using System.Collections.Generic;
+using BokLib.Log;
+using BokLib.Tools;
 using Harmony;
 
 namespace InsulatedFarmTiles
 {
     public static class InsulatedFarmTilesPatches
     {
-        public static class ModInfo
-        {
-            public static string Name = "Insulated Farm Tiles";
-            public static string Version = "1.0.0";
-        }
+        private const string Name = "Insulated Farm Tiles";
+        private const string Version = "1.0.1.0";
+        private static readonly BokModInfo modinfo = new BokModInfo(Name, Version);
 
         public static class OnModLoad
         {
             public static void OnLoad()
             {
-                Console.WriteLine($"{Timestamp()} ## Loading Mod: \"{ModInfo.Name}\" Version: {ModInfo.Version} ##");
+                LogTools.Initialize(modinfo);
             }
         }
 
         [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
-        internal class InsulatedFarmTiles_GeneratedBuildings_LoadGeneratedBuildings
+        internal class InsulatedFarmTilesGeneratedBuildingsLoadGeneratedBuildings
         {
             private static void Prefix()
             {
-                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedFarmTileConfig.ID.ToUpperInvariant()}.NAME", InsulatedFarmTileConfig.DisplayName);
-                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedFarmTileConfig.ID.ToUpperInvariant()}.DESC", InsulatedFarmTileConfig.Description);
-                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedFarmTileConfig.ID.ToUpperInvariant()}.EFFECT", InsulatedFarmTileConfig.Effect);
+                LogTools.Debug(modinfo, "Adding Insulated Farm Tile to Database ...");
+                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedFarmTileConfig.ID.ToUpperInvariant()}.NAME",
+                    InsulatedFarmTileConfig.DisplayName);
+                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedFarmTileConfig.ID.ToUpperInvariant()}.DESC",
+                    InsulatedFarmTileConfig.Description);
+                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedFarmTileConfig.ID.ToUpperInvariant()}.EFFECT",
+                    InsulatedFarmTileConfig.Effect);
 
                 ModUtil.AddBuildingToPlanScreen("Food", InsulatedFarmTileConfig.ID);
 
-                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedHydroponicFarmConfig.ID.ToUpperInvariant()}.NAME", InsulatedHydroponicFarmConfig.DisplayName);
-                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedHydroponicFarmConfig.ID.ToUpperInvariant()}.DESC", InsulatedHydroponicFarmConfig.Description);
-                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedHydroponicFarmConfig.ID.ToUpperInvariant()}.EFFECT", InsulatedHydroponicFarmConfig.Effect);
+                LogTools.Debug(modinfo, "Adding Insulated Hydroponic Tile to Database ...");
+                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedHydroponicFarmConfig.ID.ToUpperInvariant()}.NAME",
+                    InsulatedHydroponicFarmConfig.DisplayName);
+                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedHydroponicFarmConfig.ID.ToUpperInvariant()}.DESC",
+                    InsulatedHydroponicFarmConfig.Description);
+                Strings.Add($"STRINGS.BUILDINGS.PREFABS.{InsulatedHydroponicFarmConfig.ID.ToUpperInvariant()}.EFFECT",
+                    InsulatedHydroponicFarmConfig.Effect);
 
                 ModUtil.AddBuildingToPlanScreen("Food", InsulatedHydroponicFarmConfig.ID);
             }
         }
 
         [HarmonyPatch(typeof(Db), "Initialize")]
-        public class InsulatedFarmTiles_Db_Initialize
+        public class InsulatedFarmTilesDbInitialize
         {
-            public static string TechGroup = "TemperatureModulation";
+            public static string TechGroup = "FinerDining";
             public static void Prefix()
             {
                 AddBuildingToTechGroup(TechGroup, InsulatedFarmTileConfig.ID);
@@ -56,10 +59,9 @@ namespace InsulatedFarmTiles
 
         public static void AddBuildingToTechGroup(string techgroup, string buildingId)
         {
+            LogTools.Debug(modinfo, $"Adding BuildingId '{buildingId}' to TechGroup '{techgroup}' ...");
             var techList = new List<string>(Database.Techs.TECH_GROUPING[techgroup]) { buildingId };
             Database.Techs.TECH_GROUPING[techgroup] = techList.ToArray();
         }
-
-        private static string Timestamp() => System.DateTime.UtcNow.ToString("[HH:mm:ss.fff]");
     }
 }

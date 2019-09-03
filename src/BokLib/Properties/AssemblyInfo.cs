@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DisableInstantBuildOnSavegameLoad")]
+[assembly: AssemblyTitle("BokLib")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bokonon")]
-[assembly: AssemblyProduct("DisableInstantBuildOnSavegameLoad")]
-[assembly: AssemblyCopyright("Copyright ©  2019 Bokonon")]
+[assembly: AssemblyProduct("BokLib")]
+[assembly: AssemblyCopyright("Copyright ©  2019 by Bokonon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6c8aacff-acf2-49af-8299-e0b31a96dd5c")]
+[assembly: Guid("36a3d79f-1ce9-4158-83e4-b2a4ef44ce6b")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
