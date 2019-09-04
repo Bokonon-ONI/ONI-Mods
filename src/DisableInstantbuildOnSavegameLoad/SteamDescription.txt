@@ -17,3 +17,7 @@ Thanks to the people who have helped me, this is my first experience modding and
 
 [h1]Source Code[/h1]
 [url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
+
+[h1]Changes[/h1]
+1.0.1.0 - Rework internal code, no behavior changes
+1.0.0.0 - Initial release
