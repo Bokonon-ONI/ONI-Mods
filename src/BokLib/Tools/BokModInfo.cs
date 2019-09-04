@@ -2,8 +2,8 @@
 {
     public class BokModInfo
     {
-        public string Name;
-        public string Version;
+        public readonly string Name;
+        public readonly string Version;
 
         public BokModInfo(string name, string version)
         {
