@@ -28,6 +28,7 @@ namespace BokLib.Log
         {
             Console.WriteLine($"{Timestamp()} BokLib - WARN ({info.Name}): {message}");
         }
+        
         public static void Error(BokModInfo info, string message)
         {
             Console.WriteLine($"{Timestamp()} BokLib - ERROR ({info.Name}): {message}");
