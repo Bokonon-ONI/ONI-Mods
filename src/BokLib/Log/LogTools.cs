@@ -23,6 +23,11 @@ namespace BokLib.Log
         {
             Console.WriteLine($"{Timestamp()} BokLib - LOG ({info.Name}): {message}");
         }
+        
+        public static void Warn(BokModInfo info, string message)
+        {
+            Console.WriteLine($"{Timestamp()} BokLib - WARN ({info.Name}): {message}");
+        }
  
         private static string Timestamp() => System.DateTime.UtcNow.ToString("[HH:mm:ss.fff]");
     }
