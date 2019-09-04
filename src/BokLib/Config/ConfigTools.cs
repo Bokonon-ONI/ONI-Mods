@@ -1,5 +1,4 @@
-﻿
-namespace BokLib.Config
+﻿namespace BokLib.Config
 {
     class ConfigTools
     {

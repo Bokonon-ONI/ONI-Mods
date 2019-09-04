@@ -33,9 +33,9 @@ namespace InsulatedFarmTiles
         }
 
         [HarmonyPatch(typeof(Db), "Initialize")]
-        public class InsulatedFarmTilesDbInitialize
+        internal class InsulatedFarmTilesDbInitialize
         {
-            public static void Prefix()
+            private static void Prefix()
             {
                 BuildingTools.AddBuildingToTechGroup(ModInfo, InsulatedFarmTileConfig.TechGroup, InsulatedFarmTileConfig.Id);
                 BuildingTools.AddBuildingToTechGroup(ModInfo, InsulatedHydroponicFarmConfig.TechGroup, InsulatedHydroponicFarmConfig.Id);

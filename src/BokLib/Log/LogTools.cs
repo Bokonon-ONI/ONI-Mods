@@ -3,7 +3,7 @@ using BokLib.Tools;
 
 namespace BokLib.Log
 {
-    public class LogTools
+    public static class LogTools
     {
         public static void Initialize(BokModInfo info)
         {
