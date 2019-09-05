@@ -19,9 +19,15 @@ Thanks to the people who have helped me, this is my first experience modding and
 
 [b]Thanks everyone!![/b]
 
+[h1]Known Issues[/h1]
+I have used these tiles in two saves.  One save, my main survival save, everything is fine after updating.  My other save, a debug/sandbox save I use for testing showed strange behavior.  I had one of each and on loading the Insulated Farm and Hydroponic Tiles were natural blocks of whatever material the tile was made from.  I'm uploading what I have, hopefully what I saw was just some weird glitch :)  Please report any issues to the Steam page or the github issues link above.
+
+[h1]ONI Version[/h1]
+LU-364722
+
 [h1]Source Code[/h1]
 [url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
 
 [h1]Changes[/h1]
-1.0.1.0 - Fix update fallout, rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"
+1.0.1.0 - Fix update (LU-364722) fallout, rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"
 1.0.0.0 - Initial release
