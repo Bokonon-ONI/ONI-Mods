@@ -23,5 +23,5 @@ Thanks to the people who have helped me, this is my first experience modding and
 [url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
 
 [h1]Changes[/h1]
-1.0.1.0 - Rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"
+1.0.1.0 - Fix update fallout, rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"
 1.0.0.0 - Initial release
