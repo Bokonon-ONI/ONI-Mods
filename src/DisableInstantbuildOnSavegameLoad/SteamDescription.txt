@@ -22,7 +22,7 @@ Thanks to the people who have helped me, this is my first experience modding and
 None
 
 [h1]ONI Version[/h1]
-LU-364722
+LU-365655
 
 [h1]Changes[/h1]
 1.0.1.0 - Rework internal code, no behavior changes
