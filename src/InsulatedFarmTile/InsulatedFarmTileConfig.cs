@@ -19,7 +19,7 @@ namespace InsulatedFarmTiles
             int height = 1;
             string anim = "insulatedfarmtile_kanim";
             int hitpoints = 100;
-            float construction_time = 40f;
+            float construction_time = 300f;
             float[] tieR3 = BUILDINGS.CONSTRUCTION_MASS_KG.TIER3;
             string[] farmable = MATERIALS.RAW_MINERALS;
             float melting_point = 1600f;
