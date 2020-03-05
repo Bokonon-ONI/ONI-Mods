@@ -23,11 +23,13 @@ Thanks to the people who have helped me, this is my first experience modding and
 None
 
 [h1]ONI Version[/h1]
-LU-365655
+AP-398142-0
 
 [h1]Source Code[/h1]
 [url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
 
 [h1]Changes[/h1]
+1.0.2.0 - Fix update (AP-398142-0) fallout: update to .NET 4.0
+        - Doubled build time
 1.0.1.0 - Fix update (LU-364722) fallout, rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"
 1.0.0.0 - Initial release
