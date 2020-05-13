@@ -1,30 +1,30 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
+// General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("InsulatedFarmTiles")]
+[assembly: AssemblyTitle("DisableInstantBuildOnSavegameLoad")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bokonon")]
-[assembly: AssemblyProduct("InsulatedFarmTiles")]
+[assembly: AssemblyProduct("DisableInstantBuildOnSavegameLoad")]
 [assembly: AssemblyCopyright("Copyright ©  2019 - 2020 by Bokonon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
+// Setting ComVisible to false makes the types in this assembly not visible
+// to COM components.  If you need to access a type in this assembly from
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e362c4b7-8e95-4a61-a904-aa75685688a7")]
+[assembly: Guid("6c8aacff-acf2-49af-8299-e0b31a96dd5c")]
 
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
-//      Minor Version 
+//      Minor Version
 //      Build Number
 //      Revision
 //

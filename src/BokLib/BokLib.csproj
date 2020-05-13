@@ -63,8 +63,8 @@
     <Compile Include="Config\ConfigTools.cs" />
     <Compile Include="Log\LogTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\BokModInfo.cs" />
     <Compile Include="Tools\BuildingTools.cs" />
+    <Compile Include="Utils\BokModInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using BokLib.Log;
+using BokLib.Utils;
+using Database;
 
 namespace BokLib.Tools
 {
     public static class BuildingTools
     {
-        public static void AddBuildingToStrings(BokModInfo modInfo, string id, string name, string desc, string effect, string planScreen)
+        public static void AddBuildingToStringsAndPlanScreen(BokModInfo modInfo, string id, string name, string desc, string effect, string planScreen)
         {
             LogTools.Debug(modInfo, $"Adding '{id}' to Strings ...");
 
@@ -21,8 +23,8 @@ namespace BokLib.Tools
         public static void AddBuildingToTechGroup(BokModInfo modInfo, string techgroup, string buildingId)
         {
             LogTools.Debug(modInfo, $"Adding '{buildingId}' to TechGroup '{techgroup}' ...");
-            var techList = new List<string>(Database.Techs.TECH_GROUPING[techgroup]) {buildingId};
-            Database.Techs.TECH_GROUPING[techgroup] = techList.ToArray();
+            var techList = new List<string>(Techs.TECH_GROUPING[techgroup]) {buildingId};
+            Techs.TECH_GROUPING[techgroup] = techList.ToArray();
         }
     }
 }

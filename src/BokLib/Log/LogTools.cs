@@ -1,5 +1,5 @@
 ﻿using System;
-using BokLib.Tools;
+using BokLib.Utils;
 
 namespace BokLib.Log
 {

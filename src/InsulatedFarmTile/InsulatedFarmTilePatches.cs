@@ -1,5 +1,6 @@
 ﻿using BokLib.Log;
 using BokLib.Tools;
+using BokLib.Utils;
 using Harmony;
 
 namespace InsulatedFarmTiles
@@ -7,7 +8,7 @@ namespace InsulatedFarmTiles
     public static class InsulatedFarmTilesPatches
     {
         private const string Name = "Insulated Farm Tiles";
-        private const string Version = "1.0.1.0";
+        private const string Version = "1.0.4.0";
         private static readonly BokModInfo ModInfo = new BokModInfo(Name, Version);
 
         public static class OnModLoad
@@ -23,10 +24,10 @@ namespace InsulatedFarmTiles
         {
             private static void Prefix()
             {
-                BuildingTools.AddBuildingToStrings(ModInfo, InsulatedFarmTileConfig.Id, 
+                BuildingTools.AddBuildingToStringsAndPlanScreen(ModInfo, InsulatedFarmTileConfig.Id, 
                     InsulatedFarmTileConfig.DisplayName,InsulatedFarmTileConfig.Description,
                     InsulatedFarmTileConfig.Effect,InsulatedFarmTileConfig.PlanName);
-                BuildingTools.AddBuildingToStrings(ModInfo, InsulatedHydroponicFarmConfig.Id, 
+                BuildingTools.AddBuildingToStringsAndPlanScreen(ModInfo, InsulatedHydroponicFarmConfig.Id, 
                     InsulatedHydroponicFarmConfig.DisplayName,InsulatedHydroponicFarmConfig.Description,
                     InsulatedHydroponicFarmConfig.Effect,InsulatedHydroponicFarmConfig.PlanName);
             }

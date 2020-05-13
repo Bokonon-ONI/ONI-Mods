@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="DisableInstantBuildOnSavegameLoadPatches.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +80,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>
+    <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
