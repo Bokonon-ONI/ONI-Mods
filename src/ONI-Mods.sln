@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisableInstantbuildOnSavega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsulatedFarmTiles", "InsulatedFarmTile\InsulatedFarmTiles.csproj", "{364DA4E8-A4CA-4104-B27E-ABE5C6B034DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipedSweepyDock", "PipedSweepyDock\PipedSweepyDock.csproj", "{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{364DA4E8-A4CA-4104-B27E-ABE5C6B034DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{364DA4E8-A4CA-4104-B27E-ABE5C6B034DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{364DA4E8-A4CA-4104-B27E-ABE5C6B034DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

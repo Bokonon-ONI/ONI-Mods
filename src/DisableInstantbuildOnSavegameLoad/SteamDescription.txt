@@ -25,6 +25,7 @@ None
 AP-408920-D
 
 [h1]Changes[/h1]
+1.0.4.0 - Library update
 1.0.3.0 - Fix for update 408920
 1.0.2.0 - Upgrade for .NET 4.0
 1.0.1.0 - Rework internal code, no behavior changes
