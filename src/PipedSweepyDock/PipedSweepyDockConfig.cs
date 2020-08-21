@@ -20,7 +20,7 @@ namespace PipedSweepyDock
             "It's a good old Sweepy Dock with an output for a conveyor rail.";
 
         // public const string PlanName = "Shipping";
-        public const string PlanName = "Utilities";
+        public const string PlanName = "Conveyance";
         public const string TechGroup = "SolidTransport";
 
         public override BuildingDef CreateBuildingDef()
