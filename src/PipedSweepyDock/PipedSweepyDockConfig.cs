@@ -4,16 +4,23 @@ using UnityEngine;
 
 namespace PipedSweepyDock
 {
-    public class PipedSweepyDockConfig : IBuildingConfig
+    public class PipedSweepyDockConfig : IBuildingConfig, ISim1000ms
     {
+        [MyCmpReq]
+        private Operational operational;
+
+        [MyCmpReq]
+        private SolidConduitDispenser dispenser;
+        
         public const string Id = "PipedSweepyDock";
         public const string DisplayName = "Piped Sweepy Dock";
         public const string Description = "Add conveyor output to Sweepy's dock.";
 
         public const string Effect =
-            "Adds a conveyor output to the Sweepy Dock.  It's pretty useless without it ... :P";
+            "It's a good old Sweepy Dock with an output for a conveyor rail.";
 
-        public const string PlanName = "Shipping";
+        // public const string PlanName = "Shipping";
+        public const string PlanName = "Utilities";
         public const string TechGroup = "SolidTransport";
 
         public override BuildingDef CreateBuildingDef()
@@ -66,16 +73,33 @@ namespace PipedSweepyDock
             storage2.allowItemRemoval = true;
             storage2.ignoreSourcePriority = true;
             storage2.showDescriptor = true;
-            storage2.storageFilters = STORAGEFILTERS.NOT_EDIBLE_SOLIDS;
+            List<Tag> tagList = new List<Tag>();
+            tagList.AddRange((IEnumerable<Tag>) STORAGEFILTERS.NOT_EDIBLE_SOLIDS);
+            tagList.AddRange((IEnumerable<Tag>) STORAGEFILTERS.FOOD);
+            tagList.AddRange((IEnumerable<Tag>) STORAGEFILTERS.LIQUIDS);
+            storage2.storageFilters = tagList;
             storage2.storageFullMargin = STORAGE.STORAGE_LOCKER_FILLED_MARGIN;
             storage2.fetchCategory = Storage.FetchCategory.StorageSweepOnly;
             storage2.capacityKg = 1000f;
             storage2.allowClearable = true;
+            storage2.onlyTransferFromLowerPriority = true;
             go.AddOrGet<CharacterOverlay>();
             go.AddOrGet<SweepBotStation>();
-            SolidConduitDispenser dispenser = go.AddOrGet<SolidConduitDispenser>();
+            // SolidConduitInbox inbox = go.AddOrGet<SolidConduitInbox>();
+            // inbox.enabled = true;
+            dispenser = go.AddOrGet<SolidConduitDispenser>();
             dispenser.storage = storage2;
+            dispenser.alwaysDispense = true;
         }
+        
+        public void Sim1000ms(float dt)
+        {
+            if (this.operational.IsOperational && this.dispenser.IsDispensing)
+                this.operational.SetActive(true, false);
+            else
+                this.operational.SetActive(false, false);
+        }
+
 
         public override void DoPostConfigureComplete(GameObject go)
         {

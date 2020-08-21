@@ -8,20 +8,20 @@ namespace PipedSweepyDock
     {
         [MyCmpReq] private Operational operational;
         [MyCmpReq] private SolidConduitDispenser dispenser;
-        [MyCmpAdd] private Storage storage;
-        private FilteredStorage filteredStorage;
+        [MyCmpAdd] private Storage storage1;
+        [MyCmpAdd] private Storage storage2;
 
         protected override void OnPrefabInit()
         {
             base.OnPrefabInit();
-            this.filteredStorage = new FilteredStorage((KMonoBehaviour) this, (Tag[]) null, (Tag[]) null,
-                (IUserControlledCapacity) null, false, Db.Get().ChoreTypes.StorageFetch);
+            // this.filteredStorage = new FilteredStorage((KMonoBehaviour) this, (Tag[]) null, (Tag[]) null,
+            //     (IUserControlledCapacity) null, false, Db.Get().ChoreTypes.StorageFetch);
         }
 
         protected override void OnSpawn()
         {
             base.OnSpawn();
-            this.filteredStorage.FilterChanged();
+            // this.filteredStorage.FilterChanged();
             this.smi.StartSM();
         }
 
