@@ -13,7 +13,7 @@ namespace PipedSweepyDock
         public const string Effect =
             "Adds a conveyor output to the Sweepy Dock.  It's pretty useless without it ... :P";
 
-        public const string PlanName = "Utilities";
+        public const string PlanName = "Shipping";
         public const string TechGroup = "SolidTransport";
 
         public override BuildingDef CreateBuildingDef()
@@ -73,7 +73,8 @@ namespace PipedSweepyDock
             storage2.allowClearable = true;
             go.AddOrGet<CharacterOverlay>();
             go.AddOrGet<SweepBotStation>();
-            go.AddOrGet<SolidConduitDispenser>();
+            SolidConduitDispenser dispenser = go.AddOrGet<SolidConduitDispenser>();
+            dispenser.storage = storage2;
         }
 
         public override void DoPostConfigureComplete(GameObject go)
