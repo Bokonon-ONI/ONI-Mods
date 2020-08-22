@@ -1,5 +1,5 @@
-﻿using KSerialization;
-using System;
+﻿using System;
+using KSerialization;
 
 namespace PipedSweepyDock
 {
@@ -14,14 +14,11 @@ namespace PipedSweepyDock
         protected override void OnPrefabInit()
         {
             base.OnPrefabInit();
-            // this.filteredStorage = new FilteredStorage((KMonoBehaviour) this, (Tag[]) null, (Tag[]) null,
-            //     (IUserControlledCapacity) null, false, Db.Get().ChoreTypes.StorageFetch);
         }
 
         protected override void OnSpawn()
         {
             base.OnSpawn();
-            // this.filteredStorage.FilterChanged();
             this.smi.StartSM();
         }
 
