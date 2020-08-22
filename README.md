@@ -12,7 +12,7 @@ These are my mods, hope others can find them of some use.
 
 ## **Works In Progress**
 
-** Piped Sweepy Dock **
+**Piped Sweepy's Dock**
 - Sweepy is adorable but useless, this makes him not useless.  It's not released yet as I'm still testing it, don't want sweepy to go from useless to OP, I may need to make some more tweaks.
 
 ## **Bugs and Feature requests**
