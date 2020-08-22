@@ -1,17 +1,18 @@
-﻿[h1]Piped Sweepy Dock[/h1]
+﻿[h1]Piped Sweepy's Dock[/h1]
 
 [h1]Purpose[/h1]
-I had read about how useless the Sweepy and it's dock is so I never built one.  I was bored and wanted to see it in action for myself.  
-I had a use in mind so I setup what I thought was a good use for Sweepy only to be sadly disappointed.  If the Dock can't be emptied by an autosweeper or have an output for a conveyor rail, 
-I just don't see using it.  I looked in the Workshop and found [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2042663291&searchtext=sweepy]Zonkeeh's Configurable Sweepy Stats mod[/url].  It does a lot more than I wanted but said it could add what I wanted.  
-I enabled the mod, edited the config and built a Sweepy.  Sure enough there was an output port.  So I hooked it up, watched and waited.  
-And waited and waited, and the dock never sent it's storage off on the rails.  Steam page for Zoonkeeh's mod has a few others saying the same thing so I tried to fix his mod.  
-I couldn't get that working so rather than wait for him to get back to me, this mod was born.  His changed the vanilla building, mine adds a new one.
+I had read about how useless the Sweepy and it's dock is so I never built one.  I was bored and wanted to see it in action for myself.  I had a use in mind so I setup what I thought was a good use for Sweepy only to be sadly disappointed.  If the Dock can't be emptied by an autosweeper or have an output for a conveyor rail, I just don't see using it.  I looked in the Workshop and found [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2042663291&searchtext=sweepy]Zonkeeh's Configurable Sweepy Stats mod[/url].  It does a lot more than I wanted but said it could add what I wanted.  I enabled the mod, edited the config and built a Sweepy.  Sure enough there was an output port.  So I hooked it up, watched and waited.  And waited and waited, and the dock never sent it's storage off on the rails.  Steam page for Zoonkeeh's mod has a few others saying the same thing so I tried to fix his mod.  I couldn't get that working so rather than wait for him to get back to me, this mod was born.  His changed the vanilla building, mine adds a new one.
 
-Adds a new building, the Piped Sweepy Dock which adds conveyor rail output.
+FWIW, I did test this with Zonkeeh's mod also active and it seemed to work fine with the new building type also.  I did not test it heavily though so I also wouldn't be surprised if they didn't work well together, I did not put any effort into compatibility, I just got lucky.
 
-I did test this with Zonkeeh's mod and it seemed to work fine with the new building type also.  I did not test it heavily though so I wouldn't be surprised if they didn't work well together, 
-I did not put any effort into compatibility, I just got lucky.
+[h2]Changes From Vanilla Sweepy's Dock[/h2]
+* Adds conveyor output port
+[h3]Costs[/h3]
+* 175 kg Refined Metal - cost of vanilla Sweepy's Dock (75 kG) plus 1/2 the cost of a Conveyor Loader (200 kG)
+* 300 kW power - 240 kW like the original sweepy plus 1/2 the power for a Conveyor Loader (120 kW)
+* Construction time is 40s, vanilla Sweepy's Dock is 30, I pulled 40 out of my ass but it seems appropriate
+[h3]Additional Features[/h3]
+* I added Liquids to the list of things that are allowed to be conveyed, you can use Sweepy to clean up bottled liquids and ship the bottles elsewhere. I've never seen liquid bottles conveyed before, it was kind of neat to see for hte first time.
 
 [h1]Bugs and Feature requests[/h1]
 Please use the github [url=https://github.com/Bokonon-ONI/ONI-Mods/issues]issues[/url] page for reporting bugs or requesting new features.

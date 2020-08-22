@@ -13,13 +13,12 @@ namespace PipedSweepyDock
         private SolidConduitDispenser dispenser;
         
         public const string Id = "PipedSweepyDock";
-        public const string DisplayName = "Piped Sweepy Dock";
-        public const string Description = "Add conveyor output to Sweepy's dock.";
+        public const string DisplayName = "Piped Sweepy's Dock";
+        public const string Description = "Adds a conveyor output to Sweepy's Dock.";
 
         public const string Effect =
-            "It's a good old Sweepy Dock with an output for a conveyor rail.";
+            "It's a good old Sweepy's Dock except it has an output for a conveyor rail.";
 
-        // public const string PlanName = "Shipping";
         public const string PlanName = "Conveyance";
         public const string TechGroup = "SolidTransport";
 
@@ -30,13 +29,13 @@ namespace PipedSweepyDock
             var height = 2;
             var anim = "sweep_bot_base_station_kanim";
             var hitpoints = 30;
-            var construction_time = 30f;
+            var construction_time = 40f;
             var melting_point = 1600f;
             var build_location_rule = BuildLocationRule.OnFloor;
 
             float[] construction_mass = new float[1]
             {
-                BUILDINGS.CONSTRUCTION_MASS_KG.TIER2[0] - SweepBotConfig.MASS
+                BUILDINGS.CONSTRUCTION_MASS_KG.TIER3[0] - SweepBotConfig.MASS
             };
             string[] refinedMetals = MATERIALS.REFINED_METALS;
             EffectorValues none = NOISE_POLLUTION.NONE;
@@ -48,7 +47,7 @@ namespace PipedSweepyDock
             buildingDef.Floodable = false;
             buildingDef.AudioCategory = "Metal";
             buildingDef.RequiresPowerInput = true;
-            buildingDef.EnergyConsumptionWhenActive = 240f;
+            buildingDef.EnergyConsumptionWhenActive = 300f;
             buildingDef.ExhaustKilowattsWhenActive = 0.0f;
             buildingDef.SelfHeatKilowattsWhenActive = 1f;
             buildingDef.OutputConduitType = ConduitType.Solid;
@@ -85,8 +84,6 @@ namespace PipedSweepyDock
             storage2.onlyTransferFromLowerPriority = true;
             go.AddOrGet<CharacterOverlay>();
             go.AddOrGet<SweepBotStation>();
-            // SolidConduitInbox inbox = go.AddOrGet<SolidConduitInbox>();
-            // inbox.enabled = true;
             dispenser = go.AddOrGet<SolidConduitDispenser>();
             dispenser.storage = storage2;
             dispenser.alwaysDispense = true;
