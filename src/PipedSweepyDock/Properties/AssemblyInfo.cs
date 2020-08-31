@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PipedSweepyDock")]
-[assembly: AssemblyCopyright("Copyright ©  2020 by Bokonon")]
+[assembly: AssemblyCopyright("Copyright © 2020 by Bokonon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

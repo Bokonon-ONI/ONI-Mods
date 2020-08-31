@@ -5,13 +5,13 @@ I had read about how useless the Sweepy and it's dock is so I never built one.  
 
 FWIW, I did test this with Zonkeeh's mod also active and it seemed to work fine with the new building type also.  I did not test it heavily though so I also wouldn't be surprised if they didn't work well together, I did not put any effort into compatibility, I just got lucky.
 
-[h2]Changes From Vanilla Sweepy's Dock[/h2]
+[h1]Changes From Vanilla Sweepy's Dock[/h1]
 * Adds conveyor output port
-[h3]Costs[/h3]
+[i][b]Costs:[/b][/i]
 * 175 kg Refined Metal - cost of vanilla Sweepy's Dock (75 kG) plus 1/2 the cost of a Conveyor Loader (200 kG)
 * 300 kW power - 240 kW like the original sweepy plus 1/2 the power for a Conveyor Loader (120 kW)
 * Construction time is 40s, vanilla Sweepy's Dock is 30, I pulled 40 out of my ass but it seems appropriate
-[h3]Additional Features[/h3]
+[i][b]Additional Features:[/i][b]
 * I added Liquids to the list of things that are allowed to be conveyed, you can use Sweepy to clean up bottled liquids and ship the bottles elsewhere. I've never seen liquid bottles conveyed before, it was kind of neat to see for hte first time.
 
 One last thing, I did no graphics for this at all, I reused the art and animation of the original Sweepy's Dock.  If anyone is feeling frisky and wants to do new art, I'd gladly add it in and give credit if I like it.

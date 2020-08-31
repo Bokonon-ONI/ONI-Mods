@@ -8,7 +8,10 @@ namespace PipedSweepyDock
     public class PipedSweepyDockPatches
     {
         private const string Name = "Piped Sweepy Dock";
-        private const string Version = "1.0.0.0";
+
+        private static readonly string Version =
+            System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
         private static readonly BokModInfo ModInfo = new BokModInfo(Name, Version);
 
         public static class OnModLoad
@@ -18,14 +21,15 @@ namespace PipedSweepyDock
                 LogTools.Initialize(ModInfo);
             }
         }
+
         [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
         internal class InsulatedFarmTilesGeneratedBuildingsLoadGeneratedBuildings
         {
             private static void Prefix()
             {
-                BuildingTools.AddBuildingToStringsAndPlanScreen(ModInfo, PipedSweepyDockConfig.Id, 
-                    PipedSweepyDockConfig.DisplayName,PipedSweepyDockConfig.Description,
-                    PipedSweepyDockConfig.Effect,PipedSweepyDockConfig.PlanName);
+                BuildingTools.AddBuildingToStringsAndPlanScreen(ModInfo, PipedSweepyDockConfig.Id,
+                    PipedSweepyDockConfig.DisplayName, PipedSweepyDockConfig.Description,
+                    PipedSweepyDockConfig.Effect, PipedSweepyDockConfig.PlanName);
             }
         }
 
@@ -34,7 +38,8 @@ namespace PipedSweepyDock
         {
             private static void Prefix()
             {
-                BuildingTools.AddBuildingToTechGroup(ModInfo, PipedSweepyDockConfig.TechGroup, PipedSweepyDockConfig.Id);
+                BuildingTools.AddBuildingToTechGroup(ModInfo, PipedSweepyDockConfig.TechGroup,
+                    PipedSweepyDockConfig.Id);
             }
         }
     }
