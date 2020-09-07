@@ -7,7 +7,10 @@ namespace DisableInstantBuildOnSavegameLoad
     internal class DisableInstantBuildOnSavegameLoadPatches
     {
         private const string Name = "Disable Instant Build On Savegame Load";
-        private const string Version = "1.0.4.0";
+
+        private static readonly string Version =
+            System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
         private static readonly BokModInfo ModInfo = new BokModInfo(Name, Version);
 
         internal static class OnModLoad
