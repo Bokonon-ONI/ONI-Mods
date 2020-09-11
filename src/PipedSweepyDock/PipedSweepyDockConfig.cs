@@ -25,7 +25,7 @@ namespace PipedSweepyDock
         public override BuildingDef CreateBuildingDef()
         {
             var id = Id;
-            var width = 1;
+            var width = 2;
             var height = 2;
             var anim = "sweep_bot_base_station_kanim";
             var hitpoints = 30;
