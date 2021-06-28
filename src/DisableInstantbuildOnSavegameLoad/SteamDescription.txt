@@ -22,9 +22,10 @@ Thanks to the people who have helped and inspired me.
 None
 
 [h1]ONI Version[/h1]
-AP-408920-D
+469369
 
 [h1]Changes[/h1]
+2.0.0.0 - Updated for Spaced Out/vanilla codebase merge
 1.0.4.0 - Library update
 1.0.3.0 - Fix for update 408920
 1.0.2.0 - Upgrade for .NET 4.0
