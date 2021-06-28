@@ -1,10 +1,10 @@
 ﻿using BokLib.Log;
 using BokLib.Utils;
-using Harmony;
+using HarmonyLib;
 
 namespace DisableInstantBuildOnSavegameLoad
 {
-    internal class DisableInstantBuildOnSavegameLoadPatches
+    internal class DisableInstantBuildOnSavegameLoadPatches : KMod.UserMod2
     {
         private const string Name = "Disable Instant Build On Savegame Load";
 
@@ -22,12 +22,12 @@ namespace DisableInstantBuildOnSavegameLoad
         }
 
         [HarmonyPatch(typeof(LoadScreen))]
-        [HarmonyPatch("OnKeyUp")]
+        [HarmonyPatch("OnKeyDown")]
         public class LoadScreen_OnKeyUp_Patch
         {
             public static void Prefix()
             {
-                LogTools.Debug(ModInfo, "Entered LoadScreen_OnKeyUp_Patch.Prefix");
+                LogTools.Debug(ModInfo, "Entered LoadScreen_OnKeyDown_Patch.Prefix");
                 if (!DebugHandler.enabled)
                 {
                     LogTools.Debug(ModInfo, "Debug not enabled, exiting ...");

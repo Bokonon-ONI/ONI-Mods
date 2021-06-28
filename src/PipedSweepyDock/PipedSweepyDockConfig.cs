@@ -6,12 +6,10 @@ namespace PipedSweepyDock
 {
     public class PipedSweepyDockConfig : IBuildingConfig, ISim1000ms
     {
-        [MyCmpReq]
-        private Operational operational;
+        [MyCmpReq] private Operational operational;
 
-        [MyCmpReq]
-        private SolidConduitDispenser dispenser;
-        
+        [MyCmpReq] private SolidConduitDispenser dispenser;
+
         public const string Id = "PipedSweepyDock";
         public const string DisplayName = "Piped Sweepy's Dock";
         public const string Description = "Adds a conveyor output to Sweepy's Dock.";
@@ -41,7 +39,8 @@ namespace PipedSweepyDock
             EffectorValues none = NOISE_POLLUTION.NONE;
             EffectorValues tieR1 = BUILDINGS.DECOR.PENALTY.TIER1;
             EffectorValues noise = none;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints, construction_time,
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, width, height, anim, hitpoints,
+                construction_time,
                 construction_mass, refinedMetals, melting_point, build_location_rule, tieR1, noise, 0.2f);
             buildingDef.ViewMode = OverlayModes.Power.ID;
             buildingDef.Floodable = false;
@@ -83,12 +82,15 @@ namespace PipedSweepyDock
             storage2.allowClearable = true;
             storage2.onlyTransferFromLowerPriority = true;
             go.AddOrGet<CharacterOverlay>();
-            go.AddOrGet<SweepBotStation>();
+            // Non DLC:
+            // go.AddOrGet<SweepBotStation>();
+            // DLC:
+            go.AddOrGet<SweepBotStation>().SetStorages(storage1, storage2);
             dispenser = go.AddOrGet<SolidConduitDispenser>();
             dispenser.storage = storage2;
             dispenser.alwaysDispense = true;
         }
-        
+
         public void Sim1000ms(float dt)
         {
             if (this.operational.IsOperational && this.dispenser.IsDispensing)

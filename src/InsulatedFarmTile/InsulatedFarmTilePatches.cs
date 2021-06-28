@@ -1,11 +1,11 @@
 ﻿using BokLib.Log;
 using BokLib.Tools;
 using BokLib.Utils;
-using Harmony;
+using HarmonyLib;
 
 namespace InsulatedFarmTiles
 {
-    public static class InsulatedFarmTilesPatches
+    public class InsulatedFarmTilesPatches : KMod.UserMod2
     {
         private const string Name = "Insulated Farm Tiles";
 
@@ -22,6 +22,7 @@ namespace InsulatedFarmTiles
             }
         }
 
+        [HarmonyPatch(typeof(GeneratedBuildings))]
         [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
         internal class InsulatedFarmTilesGeneratedBuildingsLoadGeneratedBuildings
         {
@@ -36,10 +37,11 @@ namespace InsulatedFarmTiles
             }
         }
 
+        [HarmonyPatch(typeof(Db))]
         [HarmonyPatch(typeof(Db), "Initialize")]
         internal class InsulatedFarmTilesDbInitialize
         {
-            private static void Prefix()
+            private static void Postfix()
             {
                 BuildingTools.AddBuildingToTechGroup(ModInfo, InsulatedFarmTileConfig.TechGroup,
                     InsulatedFarmTileConfig.Id);

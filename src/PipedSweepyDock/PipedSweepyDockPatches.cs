@@ -1,11 +1,11 @@
 ﻿using BokLib.Log;
 using BokLib.Tools;
 using BokLib.Utils;
-using Harmony;
+using HarmonyLib;
 
 namespace PipedSweepyDock
 {
-    public class PipedSweepyDockPatches
+    public class PipedSweepyDockPatches : KMod.UserMod2
     {
         private const string Name = "Piped Sweepy Dock";
 
@@ -36,7 +36,12 @@ namespace PipedSweepyDock
         [HarmonyPatch(typeof(Db), "Initialize")]
         internal class InsulatedFarmTilesDbInitialize
         {
-            private static void Prefix()
+            // Non DLC:
+            // private static void Prefix()
+
+            //DLC:
+
+            private static void Postfix()
             {
                 BuildingTools.AddBuildingToTechGroup(ModInfo, PipedSweepyDockConfig.TechGroup,
                     PipedSweepyDockConfig.Id);

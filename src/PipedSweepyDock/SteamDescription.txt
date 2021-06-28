@@ -35,10 +35,12 @@ Thanks to the people who have helped and inspired me.
 None
 
 [h1]ONI Version[/h1]
-420700
+469369
 
 [h1]Source Code[/h1]
 [url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
 
 [h1]Changes[/h1]
-1.0.0.0 - Initial release
+2.0.0.0 - Updated for Spaced Out/vanilla codebase merge
+1.0.1 - Changed building width to 2 from 1
+1.0.0 - Initial release

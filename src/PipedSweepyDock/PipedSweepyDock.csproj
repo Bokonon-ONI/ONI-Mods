@@ -1,18 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\ILMerge.3.0.29\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" />
+  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')"/>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PipedSweepyDock</RootNamespace>
-    <AssemblyName>PipedSweepyDock</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{B41E5642-C4EC-4B29-8B13-E856FFB7BD11}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>PipedSweepyDock</RootNamespace>
+        <AssemblyName>PipedSweepyDock</AssemblyName>
+        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <NuGetPackageImportStamp>
+        </NuGetPackageImportStamp>
+        <TargetFrameworkProfile/>
+    </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+      <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+      <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PipedSweepyDock.cs" />
@@ -44,27 +49,27 @@
       <Name>BokLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Ionic.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\mscorlib.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll</HintPath>
-    </Reference>
-    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\System.dll</HintPath>
+    <ItemGroup>
+        <Reference Include="0Harmony, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Ionic.Zip.dll</HintPath>
+        </Reference>
+        <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\mscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\System.Core.dll</HintPath>
@@ -72,14 +77,8 @@
     <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\System.Data.dll</HintPath>
     </Reference>
-    <Reference Include="System.XML">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.XML.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\System.Xml.Linq.dll</HintPath>
@@ -92,28 +91,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+      <Content Include="SteamDescription.txt"/>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="SteamDescription.txt" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <!--      <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" "$(ONIRefPath)Assembly-CSharp.dll" "$(ONIRefPath)Assembly-CSharp-firstpass.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>-->
-    <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319</PostBuildEvent>
-  </PropertyGroup>
-<!--  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">-->
-<!--    <PropertyGroup>-->
-<!--      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>-->
-<!--    </PropertyGroup>-->
-<!--    <Error Condition="!Exists('packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\ILMerge.3.0.29\build\ILMerge.props'))" />-->
-<!--&lt;!&ndash;    <Error Condition="!Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.29\build\ILMerge.props'))" />&ndash;&gt;-->
-<!--  </Target>-->
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
+    <ItemGroup>
+        <None Include="packages.config"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <PropertyGroup>
+        <!--      <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" "$(ONIRefPath)Assembly-CSharp.dll" "$(ONIRefPath)Assembly-CSharp-firstpass.dll" /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727</PostBuildEvent>-->
+        <PostBuildEvent>$(ILMergeConsolePath) /out:$(TargetDir)$(TargetName)-merged.dll $(TargetDir)$(TargetName).dll "$(BokLibBinBase)$(outDir)BokLib.dll" /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319</PostBuildEvent>
+    </PropertyGroup>
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+        <PropertyGroup>
+            <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+        </PropertyGroup>
+        <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))"/>
     </Target>
-    <Target Name="AfterBuild">
-    </Target>
-    -->
+    <!--  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">-->
+    <!--    <PropertyGroup>-->
+    <!--      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>-->
+    <!--    </PropertyGroup>-->
+    <!--    <Error Condition="!Exists('packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\ILMerge.3.0.29\build\ILMerge.props'))" />-->
+    <!--&lt;!&ndash;    <Error Condition="!Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.29\build\ILMerge.props'))" />&ndash;&gt;-->
+    <!--  </Target>-->
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+           Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+      -->
 </Project>

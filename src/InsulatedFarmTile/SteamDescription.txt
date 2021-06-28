@@ -23,15 +23,39 @@ Thanks to the people who have helped and inspired me, this is my first experienc
 None
 
 [h1]ONI Version[/h1]
-408920
+469369
 
 [h1]Source Code[/h1]
 [url=https://github.com/Bokonon-ONI/ONI-Mods]Bokonon's ONI Mods on github[/url]
 
 [h1]Changes[/h1]
-1.0.4.0 - Library update
-1.0.3.0 - Fix for update 408920
-1.0.2.0 - Fix update (AP-398142-0) fallout: update to .NET 4.0
-        - Doubled build time
-1.0.1.0 - Fix update (LU-364722) fallout, rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"
-1.0.0.0 - Initial release
+[table]
+[tr]
+[td]2.0.0.0[/td]
+[td]Updated for Spaced Out/vanilla codebase merge[/td]
+[/tr]
+[tr]
+[td]1.0.4.0[/td]
+[td]Library update[/td]
+[/tr]
+[tr]
+[td]1.0.3.0[/td]
+[td]Fix for update 408920[/td]
+[/tr]
+[tr]
+[td]1.0.2.0[/td]
+[td]Fix update (AP-398142-0) fallout: update to .NET 4.0[/td]
+[/tr]
+[tr]
+[td][/td]
+[td]Doubled build time[/td]
+[/tr]
+[tr]
+[td]1.0.1.0[/td]
+[td]Fix update (LU-364722) fallout, rework internal code, move required research from "Temperature Modulation" to "Gourmet Meal Preparation"[/td]
+[/tr]
+[tr]
+[td]1.0.0.0[/td]
+[td]Initial release[/td]
+[/tr]
+[/table]
