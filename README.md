@@ -10,10 +10,10 @@ These are my mods, hope others can find them of some use.
 **Insulated Farm Tiles**
 - Insulated versions of farm and hydroponic tiles.  Many people are frustrated that wheezeworts now require resources to be deliverd, this should enable you to do so from outside but still be insulated from temperature and not have to allow dupe access inside.
 
-## **Works In Progress**
-
 **Piped Sweepy's Dock**
-- Sweepy is adorable but useless, this makes him not useless.  It's not released yet as I'm still testing it, don't want sweepy to go from useless to OP, I may need to make some more tweaks.
+- Sweepy is adorable but useless, this makes him not useless.
+
+## **Works In Progress**
 
 ## **Bugs and Feature requests**
 - Please use the github [issues](https://github.com/Bokonon-ONI/ONI-Mods/issues) page for reporting bugs or requesting new features.
