@@ -1,0 +1,3 @@
+title: "Disable Instant Build On Save Game Load"
+description: "Disables Instant Build when a saved game is loaded."
+staticID: Bokonon.DisableInstantBuildOnSaveGameLoad
